@@ -1,0 +1,409 @@
+/*
+Theme Name: Pronamic
+Theme URI: http://pronamic.nl
+Description: The theme for Pronamic
+Author: Pronamic
+Version: 1.0
+Tags: blue, white, clean
+*/
+
+/*
+ * Blue: #0088cc
+ */
+
+body { font-size: 100%; line-height: 1;  }
+article, aside, dialog, figure, footer, header, hgroup, nav, section, img { display: block; }
+
+nav ul,
+nav ol {
+	list-style: none;
+
+	margin: 0;
+	padding: 0;
+}
+
+nav ul:after,
+#nav-single:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clear {
+	clear: both;
+}
+
+img {
+	border: none;
+}
+
+body {
+	background: #eee;
+
+	color: #333;
+
+	font-family: Arial, sans-serif;
+
+	font-size: 12px;
+	line-height: 1.5;
+
+	margin: 0;
+}
+
+/**
+ * Global
+ */
+.alignleft {
+	float: left;
+
+	margin: 10px 10px 10px 0;
+}
+
+.alignright {
+	float: right;
+
+	margin: 10px 0 10px 10px;
+}
+
+p {
+	margin: 0 0 15px 0;
+}
+
+p.lead {
+	font-size: 20px;
+
+	font-family: georgia, serif;
+	font-style: italic;
+}
+
+/**
+ * Anchors
+ */
+a {
+	color: #0088cc;
+
+	text-decoration: none;
+}
+
+a:hover {
+	color: #000;
+}
+
+a.btn {
+	background: #0088cc;
+
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+
+	-webkit-transition: background 0.2s linear;
+	-moz-transition:  background 0.2s linear;
+	transition:  background 0.2s linear;
+
+	color: #FFF;
+
+	display: inline-block;
+
+	padding: 5px 10px;
+}
+
+a.btn:hover {
+	background: #000;
+}
+
+/**
+ * Headings
+ */
+h1, h2, h3, h4, h5, h6 { 
+	color: #000; 
+	
+	font-weight: bold;
+	font-family: Arial, sans-serif;
+
+	line-height: 1.25;
+	
+	margin: 0 0 10px 0;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+	color: #000;
+}
+
+h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover, h6 a:hover {
+	color: #0088cc;
+}
+
+h1 { font-size: 48px; }
+h2 { font-size: 36px; }
+h3 { font-size: 26px; }
+h4 { font-size: 20px; }
+h5 { font-size: 16px; }
+h6 { font-size: 14px; }
+
+/**
+ * Header
+ */
+#header {
+ 	margin-bottom: 20px;
+}
+ 
+/**
+ * Site title
+ */
+#site-title {
+	float: left;
+
+	margin: 0;
+	padding: 0;
+}
+
+#site-title a {
+	background: url("images/logo.png") no-repeat;
+
+	display: block;
+
+	overflow: hidden;
+
+	width: 124px;
+	height: 71px;
+
+	text-indent: -9999px;
+}
+
+/**
+ * Search
+ */
+#search {
+	float: right;
+}
+
+#search label {
+	display: none;
+}
+
+/**
+ * Utility navigation
+ */
+#utility-nav {
+	float: right;
+
+	margin-left: 20px;
+}
+
+#utility-nav li {
+	padding: 0 5px;
+
+	float: left;
+}
+
+/**
+ * Primary navigation
+ */
+#primary-nav {
+	background: #222;
+
+	margin-top: 20px;
+}
+
+#primary-nav li {
+	float: left;
+}
+
+#primary-nav li a {
+	color: #fff;
+
+	display: block;
+
+	font-size: 14px;
+	font-weight: bold;
+
+	padding: 12px 16px;
+}
+
+#primary-nav li.current_page_item a,
+#primary-nav li.current_page_item a:hover,
+#primary-nav li.current_page_parent a,
+#primary-nav li.current_page_parent a:hover,
+#primary-nav li.current-page-ancestor a,
+#primary-nav li.current-page-ancestor a:hover {
+	background: #0088cc;
+	
+	color: #fff;
+}
+
+#primary-nav li a:hover {
+	color: #0088cc;
+}
+
+/* Drop-down */
+#primary-nav li:hover ul.sub-menu {
+	background: #ccc;
+
+	left: auto;
+
+	z-index: 10;
+}
+
+#primary-nav ul.sub-menu { 
+	position: absolute;
+
+	left: -999em;
+	
+	z-index: 2;
+}
+
+#primary-nav ul.sub-menu li {
+	float: none;
+}
+
+#primary-nav ul.sub-menu a {
+	min-width: 150px;
+}
+
+/**
+ * Container
+ */
+#wrapper {
+	margin: 0 auto;
+
+	width: 1000px;
+}
+
+#container {
+	background: #fff;
+
+	margin: 0 10px;
+	padding: 20px;
+}
+
+/**
+ * Main
+ */
+#main {
+	margin-bottom: 20px;
+}
+
+/**
+ * Content
+ */
+#content {
+	float: left;
+
+	width: 600px;
+}
+
+/**
+ * Posts
+ */
+.entry-meta {
+	color: #999;
+
+	margin-top: -10px;
+	margin-bottom: 20px;
+}
+
+footer.entry-meta {
+	margin-top: 20px;
+}
+
+.hentry {
+	border-bottom: 1px solid #ddd;
+
+	margin-bottom: 20px;
+    padding-bottom: 20px;
+}
+
+.hentry:last-child {
+	border: none;
+}
+
+.entry-title, .entry-title a {
+	font-size: 36px;
+}
+
+/**
+ * Pagination
+ */
+#nav-single {
+	margin-bottom: 20px;
+}
+
+.nav-previous {
+	float: left;
+}
+
+.nav-next {
+	float: right;
+}
+
+/**
+ * Aside
+ */
+aside {
+	float: right;
+
+	width: 280px;
+}
+
+aside .widget {
+	background: #eee;
+
+	margin-bottom: 20px;
+	padding: 20px;
+}
+
+aside .widget p:last-child {
+	margin: 0;
+}
+
+/**
+ * Footer
+ */
+#footer {
+	border-top: 1px solid #ddd;
+
+	padding-top: 20px;
+}
+
+#footer .col {
+	float: left;
+
+	margin-right: 20px;
+
+	width: 300px;
+}
+
+#footer .col.last {
+	margin: 0;
+}
+
+/**
+ * Bottom
+ */
+#bottom {
+	color: #999;
+
+	font-size: 11px;
+
+	margin-top: 20px;
+}
+
+#bottom .statement {
+	float: left;
+}
+
+#bottom .builder {
+	float: right;
+}
+
+/**
+ * Gravity Forms
+ */
+body .gform_wrapper .gform_body .gform_fields .gfield input[type=text] ,
+body .gform_wrapper .gform_body .gform_fields .gfield input[type=email] ,
+body .gform_wrapper .gform_body .gform_fields .gfield input[type=tel] ,
+body .gform_wrapper .gform_body .gform_fields .gfield textarea {
+	border: 1px solid red;
+}

@@ -1,0 +1,14 @@
+/*
+Theme Name: Pronamic
+Description: Used to style the TinyMCE editor.
+*/
+
+/* Tables */
+table {
+	width: 100%;
+}
+
+/* Global */
+p.lead {
+	font-size: 20px;
+}
