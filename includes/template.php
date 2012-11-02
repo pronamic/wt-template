@@ -96,3 +96,38 @@ function pronamic_posted_on() {
 		get_the_author()
 	);
 }
+
+/**
+ * Sets the post excerpt length.
+ */
+function pronamic_excerpt_length( $length ) {
+	return 40;
+}
+add_filter( 'excerpt_length', 'pronamic_excerpt_length' );
+
+/**
+ * Returns a "Continue Reading" link for excerpts
+ */
+function pronamic_continue_reading_link() {
+	return ' <a href="'. esc_url( get_permalink() ) . '">' . __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'pronamic' ) . '</a>';
+}
+
+/**
+ * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and pronamic_continue_reading_link().
+ */
+function pronamic_auto_excerpt_more( $more ) {
+	return ' &hellip;' . pronamic_continue_reading_link();
+}
+add_filter( 'excerpt_more', 'pronamic_auto_excerpt_more' );
+
+/**
+ * Adds a pretty "Continue Reading" link to custom post excerpts.
+ */
+function pronamic_custom_excerpt_more( $output ) {
+	if ( has_excerpt() && ! is_attachment() ) {
+		$output .= pronamic_continue_reading_link();
+	}
+
+	return $output;
+}
+add_filter( 'get_the_excerpt', 'pronamic_custom_excerpt_more' );
