@@ -34,16 +34,11 @@ function pronamic_settings_page_render() {
 		<?php screen_icon(); ?>
 
 		<h2>
-			<?php _e( 'pronamic', 'pronamic' ); ?>
+			<?php _e( 'Pronamic', 'pronamic' ); ?>
 		</h2>
 
 		<form method="post" action="options.php">
-			<?php 
-
-			// @doc http://codex.wordpress.org/Function_Reference/settings_fields
-			settings_fields( 'pronamic' ); 
-
-			?>
+			<?php settings_fields( 'pronamic' ); ?>
 
 			<h3>
 				<?php _e( 'Forms', 'pronamic' ); ?>

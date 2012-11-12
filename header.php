@@ -4,6 +4,8 @@
 	<head>
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<meta name="author" content="Pronamic" />
 		
 		<title>
 			<?php wp_title( '' ); ?>
@@ -13,8 +15,8 @@
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
-		<link href="<?php bloginfo( 'stylesheet_directory' ); ?>/icons/icon.png" rel="shortcut icon" type="image/x-icon" />
-		<link href="<?php bloginfo( 'stylesheet_directory' ); ?>/icons/apple-touch-icon.png" rel="apple-touch-icon" />
+		<link href="<?php bloginfo( 'template_directory' ); ?>/icons/icon.png" rel="shortcut icon" type="image/x-icon" />
+		<link href="<?php bloginfo( 'template_directory' ); ?>/icons/apple-touch-icon.png" rel="apple-touch-icon" />
 	
 		<!--[if lt IE 9]>
 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>

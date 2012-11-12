@@ -7,6 +7,7 @@ require_once get_template_directory() . '/includes/post.php';
 require_once get_template_directory() . '/includes/template.php';
 require_once get_template_directory() . '/includes/widgets.php';
 require_once get_template_directory() . '/includes/admin.php';
+// require_once get_template_directory() . '/includes/options.php';
 
 /**
  * Set the content width based on the theme's design and stylesheet.
@@ -48,20 +49,20 @@ function pronamic_load_scripts() {
 	/*
 
 	wp_enqueue_script( 
-		'jquery-fancybox' , 
-		get_bloginfo( 'stylesheet_directory' ) . '/fancybox/jquery.fancybox-1.3.4.pack.js' , 
+		'jquery-plugin' , 
+		get_bloginfo( 'template_directory' ) . '/js/jquery.plugin.js' , 
 		array( 'jquery' )
 	);
 
 	wp_enqueue_script( 
 		'jquery-config' , 
-		get_bloginfo( 'stylesheet_directory' ) . '/fancybox/jquery.fancybox-1.3.4.pack.js' , 
-		array( 'jquery', 'jquery-fancybox' )
+		get_bloginfo( 'template_directory' ) . '/js/jquery.config.js' , 
+		array( 'jquery', 'jquery-plugin' )
 	);
 
 	wp_enqueue_style( 
-		'fancybox-style' , 
-		get_bloginfo( 'stylesheet_directory' ) . '/fancybox/jquery.fancybox-1.3.4.css'
+		'plugin-style' , 
+		get_bloginfo( 'template_directory' ) . '/css/plugin.css'
 	);
 
 	*/
