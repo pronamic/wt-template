@@ -6,6 +6,7 @@
 function pronamic_admin_init() {
 	register_setting( 'pronamic', 'pronamic_company_form_id' );
 	register_setting( 'pronamic', 'pronamic_login_page_id' );
+	register_setting( 'pronamic', 'pronamic_show_author' );
 }
 
 add_action( 'admin_init', 'pronamic_admin_init' );
@@ -41,7 +42,7 @@ function pronamic_settings_page_render() {
 			<?php settings_fields( 'pronamic' ); ?>
 
 			<h3>
-				<?php _e( 'Forms', 'pronamic' ); ?>
+				<?php _e( 'Input fields', 'pronamic' ); ?>
 			</h3>
 
 			<table class="form-table">
@@ -56,7 +57,7 @@ function pronamic_settings_page_render() {
 			</table>
 
 			<h3>
-				<?php _e( 'Pages', 'pronamic' ); ?>
+				<?php _e( 'Dropdown', 'pronamic' ); ?>
 			</h3>
 
 			<table class="form-table">
@@ -74,6 +75,22 @@ function pronamic_settings_page_render() {
 						) ); 
 
 						?>
+					</td>
+				</tr>
+			</table>
+
+			<h3>
+				<?php _e( 'Radio buttons', 'pronamic' ); ?>
+			</h3>
+
+			<table class="form-table">
+				<tr valign="top">
+					<th scope="row">
+						<label for="pronamic_show_author"><?php _e( 'Show theme developer', 'pronamic' ); ?></label>
+					</th>
+					<td>
+						<input name="pronamic_show_author" type="radio" value="1" <?php checked( get_option( 'pronamic_show_author' ), 1 ); ?> /> <?php _e( 'Yes', 'pronamic' ); ?> <br />
+						<input name="pronamic_show_author" type="radio" value="0" <?php checked( get_option( 'pronamic_show_author' ), 0 ); ?>  /> <?php _e( 'No', 'pronamic' ); ?>
 					</td>
 				</tr>
 			</table>

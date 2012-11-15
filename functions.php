@@ -8,6 +8,8 @@ require_once get_template_directory() . '/includes/template.php';
 require_once get_template_directory() . '/includes/widgets.php';
 require_once get_template_directory() . '/includes/admin.php';
 // require_once get_template_directory() . '/includes/options.php';
+// require_once get_template_directory() . '/includes/meta-boxes.php';
+// require_once get_template_directory() . '/includes/shortcodes.php';
 
 /**
  * Set the content width based on the theme's design and stylesheet.

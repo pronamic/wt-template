@@ -125,3 +125,80 @@ function pronamic_get_video_image($videoURL) {
 		return $json->data->thumbnail->sqDefault;
 	}
 }
+
+///////////////////////////////////////////////
+
+/**
+ * Filter query
+ */
+function incendior_filter_results( $query ) {
+    if ( $query->is_archive() && $query->is_main_query() && ! is_admin()  ) {
+        $query->set( 'posts_per_page', '10' );
+
+        $filter_provider =  filter_input( INPUT_GET, 'filter_provider', FILTER_SANITIZE_STRING );
+        $filter_region =  filter_input( INPUT_GET, 'filter_region', FILTER_SANITIZE_STRING );
+        $filter_accommodation =  filter_input( INPUT_GET, 'filter_accommodation', FILTER_SANITIZE_STRING );
+        $filter_facility =  filter_input( INPUT_GET, 'filter_facility', FILTER_SANITIZE_STRING );
+        $filter_distance =  filter_input( INPUT_GET, 'filter_distance', FILTER_SANITIZE_STRING );
+
+		// Meta query
+		$meta_query = array(  'relation' => 'AND' );
+
+		if ( $filter_provider ) {
+			$provider_ids = explode( ',', $filter_provider );
+			
+			foreach($provider_ids as $provider_id) {
+				$meta_query[] = array(
+					'key' => '_camping_providers',
+					'value' =>  $provider_id ,
+					'compare' => '=',
+				);
+			}
+		} 
+
+		if ( $filter_region ) {
+			$region_ids = explode( ',', $filter_region );
+
+			$meta_query[] = array(
+				'key' => '_camping_region',
+				'value' =>  $region_ids ,
+				'compare' => 'IN',
+			);
+		}
+
+		if ( $filter_distance ) {
+			$meta_query[] = array(
+				'key' => '_camping_distance' , 
+				'value' => explode( '-', $filter_distance ) , 
+				'type' => 'numeric' , 
+				'compare' => 'BETWEEN'
+			);
+		}
+
+		$query->set( 'meta_query', $meta_query );
+
+        // Tax query
+		$tax_query = array(  'relation' => 'AND' );
+
+		if ( $filter_accommodation ) {
+			$tax_query[] = array(
+				'taxonomy' => 'accommodation',
+				'field' => 'id',
+				'terms' => explode( ',', $filter_accommodation ) ,
+				'operator' => 'IN'
+			);
+		} 
+		
+		if ( $filter_facility ) {
+			$tax_query[] = array(
+				'taxonomy' => 'facility',
+				'field' => 'id',
+				'terms' => explode( ',', $filter_facility ) ,
+				'operator' => 'AND'
+			);
+		}
+
+		$query->set( 'tax_query', $tax_query );
+    }
+}
+add_action( 'pre_get_posts', 'incendior_filter_results' );

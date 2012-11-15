@@ -16,6 +16,10 @@ function pronamic_content_nav() {
 	<?php endif;
 }
 
+
+///////////////////////////////////////////////
+
+
 /**
  * Template for comments and pingbacks.
  */
@@ -40,11 +44,7 @@ function pronamic_comment( $comment, $args, $depth ) {
 				<div class="comment-author vcard">
 					<?php
 
-					$avatar_size = 68;
-
-					if ( '0' != $comment->comment_parent ) {
-						$avatar_size = 39;
-					}
+					$avatar_size = 40;
 
 					echo get_avatar( $comment, $avatar_size );
 
@@ -82,6 +82,10 @@ function pronamic_comment( $comment, $args, $depth ) {
 	break; endswitch;
 }
 
+
+///////////////////////////////////////////////
+
+
 /**
  * Prints HTML with meta information for the current post-date/time and author.
  */
@@ -97,13 +101,39 @@ function pronamic_posted_on() {
 	);
 }
 
+
+///////////////////////////////////////////////
+
+
 /**
- * Sets the post excerpt length.
+ * Sets custom excerpt length.
  */
 function pronamic_excerpt_length( $length ) {
-	return 40;
+	global $pronamic_excerpt_length;
+
+	if ( isset( $pronamic_excerpt_length ) ) {
+		$length = $pronamic_excerpt_length;
+	} else {
+		$length = 40;
+	}
+
+	return $length;
 }
 add_filter( 'excerpt_length', 'pronamic_excerpt_length' );
+
+/**
+ * Adds custom excerpt length
+ */
+function pronamic_the_excerpt( $length ) {
+	global $pronamic_excerpt_length;
+	$pronamic_excerpt_length = $length;
+
+	$pronamic_excerpt = get_the_excerpt();
+
+	echo $pronamic_excerpt;
+
+	unset( $pronamic_excerpt_length );
+}
 
 /**
  * Returns a "Continue Reading" link for excerpts
@@ -113,7 +143,7 @@ function pronamic_continue_reading_link() {
 }
 
 /**
- * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and pronamic_continue_reading_link().
+ * Replaces "[...]" with an ellipsis and pronamic_continue_reading_link().
  */
 function pronamic_auto_excerpt_more( $more ) {
 	return ' &hellip;' . pronamic_continue_reading_link();
@@ -131,3 +161,24 @@ function pronamic_custom_excerpt_more( $output ) {
 	return $output;
 }
 add_filter( 'get_the_excerpt', 'pronamic_custom_excerpt_more' );
+
+
+///////////////////////////////////////////////
+
+
+/**
+ * Active archive links
+ */
+function pronamic_nav_menu_css_class( $classes, $item ) {
+	if ( $item->type == 'custom' ) {
+		$is_ancestor = strncmp( get_permalink(), $item->url, strlen( $item->url ) ) == 0;
+		$is_home = untrailingslashit( $item->url ) == home_url();
+
+		if ( $is_ancestor && ! $is_home ) {
+			$classes[] = 'current-url-ancestor';
+		}
+	}
+
+	return $classes;
+}
+add_filter( 'nav_menu_css_class', 'pronamic_nav_menu_css_class', 10, 2 );

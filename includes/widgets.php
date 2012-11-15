@@ -3,7 +3,7 @@
 /**
  * Widgets
  */
-function pronamic_unregister_wp_widgets() {
+function pronamic_wp_widgets() {
 
 	/* Unregister default WordPress Widgets */
 
@@ -25,9 +25,9 @@ function pronamic_unregister_wp_widgets() {
 	register_sidebar( array(  
 		'name'          => __( 'Main Widget', 'pronamic' ),
 		'id'            => 'main-widget',
-		'description'   => __( 'The main widget', 'pronamic' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
+		'description'   => __( 'The widget area for the main content.', 'pronamic' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>'
 	) );
@@ -35,11 +35,11 @@ function pronamic_unregister_wp_widgets() {
 	register_sidebar( array( 
 		'name'          => __( 'Sidebar Widget', 'pronamic' ),
 		'id'            => 'sidebar-widget',
-		'description'   => __( 'The widget for the sidebar', 'pronamic' ),
-		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</aside>',
+		'description'   => __( 'The widget area for the sidebar.', 'pronamic' ),
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>'
 	) );
 }
-add_action( 'widgets_init', 'pronamic_unregister_wp_widgets', 1 );
+add_action( 'widgets_init', 'pronamic_wp_widgets', 1 );
