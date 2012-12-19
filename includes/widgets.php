@@ -20,10 +20,10 @@ function pronamic_wp_widgets() {
 	unregister_widget( 'WP_Widget_Tag_Cloud' );
 	unregister_widget( 'WP_Nav_Menu_Widget' );
 
-	/* Register Widgets */
+	/* Register Widget Areas */
 
 	register_sidebar( array(  
-		'name'          => __( 'Main Widget', 'pronamic' ),
+		'name'          => __( 'Main Widget Area', 'pronamic' ),
 		'id'            => 'main-widget',
 		'description'   => __( 'The widget area for the main content.', 'pronamic' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
@@ -33,7 +33,7 @@ function pronamic_wp_widgets() {
 	) );
 
 	register_sidebar( array( 
-		'name'          => __( 'Sidebar Widget', 'pronamic' ),
+		'name'          => __( 'Sidebar Widget Area', 'pronamic' ),
 		'id'            => 'sidebar-widget',
 		'description'   => __( 'The widget area for the sidebar.', 'pronamic' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',

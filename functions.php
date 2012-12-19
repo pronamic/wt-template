@@ -35,7 +35,7 @@ function pronamic_setup() {
 
 	/* Register navigation menu's */
 	register_nav_menus( array( 
-		'primary' => __( 'Primary Menu', 'pronamic' ) ,
+		'primary' => __( 'Primary Menu', 'pronamic' ),
 		'utility' => __( 'Utility Menu', 'pronamic' )
 	) );
 
@@ -51,21 +51,22 @@ function pronamic_load_scripts() {
 	/*
 
 	wp_enqueue_script( 
-		'jquery-plugin' , 
-		get_bloginfo( 'template_directory' ) . '/js/jquery.plugin.js' , 
+		'jquery-plugin', 
+		get_bloginfo( 'template_directory' ) . '/js/jquery.plugin.js', 
 		array( 'jquery' )
 	);
 
 	wp_enqueue_script( 
-		'jquery-config' , 
-		get_bloginfo( 'template_directory' ) . '/js/jquery.config.js' , 
+		'jquery-config', 
+		get_bloginfo( 'template_directory' ) . '/js/jquery.config.js', 
 		array( 'jquery', 'jquery-plugin' )
 	);
 
 	wp_enqueue_style( 
-		'plugin-style' , 
+		'plugin-style',
 		get_bloginfo( 'template_directory' ) . '/css/plugin.css'
 	);
+
 
 	*/
 }

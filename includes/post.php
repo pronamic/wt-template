@@ -4,6 +4,8 @@
  * Initialize the custom post types and taxonomies
  */
 function pronamic_init() {
+	add_post_type_support( 'page', 'excerpt' );
+
 	/*
 
 	// Register post type
@@ -26,7 +28,7 @@ function pronamic_init() {
 		'publicly_queryable' => true , 
 		'show_ui' => true ,  
 		'show_in_menu' => true ,  
-		'capability_type' => 'page' , 
+		'capability_type' => 'post' , 
 		'has_archive' => true , 
 		'rewrite' => array( 'slug' => 'klanten' ) ,
 		'menu_icon' => get_bloginfo( 'template_url' ) . '/admin/icons/client.png' ,
@@ -53,6 +55,8 @@ function pronamic_init() {
 		'query_var' => true , 
 		'rewrite' => array( 'slug' => 'regio' ) 
 	) );
+	
+	register_taxonomy_for_object_type( 'post_tag', 'page' );
 
 	*/
 }

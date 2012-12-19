@@ -51,7 +51,7 @@
 		
 				?>
 		
-				<?php if ( get_the_author_meta( 'description' ) && ( ! function_exists( 'is_multi_author' ) || is_multi_author() ) ) : ?>
+				<?php if ( get_the_author_meta( 'description' ) && ( ! function_exists( 'is_multi_author' ) || ! is_multi_author() ) ) : ?>
 		
 					<div id="author-info">
 						<div id="author-avatar">

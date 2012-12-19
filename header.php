@@ -44,11 +44,14 @@
 					</h1>
 	
 					<nav id="utility-nav">
-						<ul>
-							<li><a href="#">Sitemap</a></li>
-							<li><a href="#">Sponsors</a></li>
-							<li><a href="#">Links</a></li>
-						</ul>
+						<?php 
+						
+						wp_nav_menu( array( 
+							'theme_location' => 'utility',
+							'fallback_cb'    => ''
+						) ); 
+						
+						?>
 					</nav>
 
 					<div id="search">
@@ -61,7 +64,8 @@
 						<?php 
 						
 						wp_nav_menu( array( 
-							'theme_location' => 'primary' 
+							'theme_location' => 'primary',
+							'fallback_cb'    => ''
 						) ); 
 						
 						?>

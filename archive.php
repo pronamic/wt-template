@@ -11,12 +11,12 @@
 					printf( __( 'Category Archives: %s', 'pronamic' ), '<span>' . single_cat_title( '', false ) . '</span>' );
 	
 				} elseif ( is_tag() ) {
-					printf( __( 'Tag Archives: %s', '_s' ), '<span>' . single_tag_title( '', false ) . '</span>' );
+					printf( __( 'Tag Archives: %s', 'pronamic' ), '<span>' . single_tag_title( '', false ) . '</span>' );
 				
 				} elseif ( is_author() ) {
 					the_post();
 	
-					printf( __( 'Author Archives: %s', '_s' ), '<span class="vcard"><a class="url fn n" href="' . get_author_posts_url( get_the_author_meta( "ID" ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' );
+					printf( __( 'Author Archives: %s', 'pronamic' ), '<span class="vcard"><a class="url fn n" href="' . get_author_posts_url( get_the_author_meta( "ID" ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' );
 	
 					rewind_posts();
 	
