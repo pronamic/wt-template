@@ -26,17 +26,17 @@ function pronamic_wp_widgets() {
 		'name'          => __( 'Main Widget Area', 'pronamic' ),
 		'id'            => 'main-widget',
 		'description'   => __( 'The widget area for the main content.', 'pronamic' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'before_widget' => '<div id="%1$s" class="widget panel %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>'
 	) );
 
 	register_sidebar( array( 
-		'name'          => __( 'Sidebar Widget Area', 'pronamic' ),
-		'id'            => 'sidebar-widget',
-		'description'   => __( 'The widget area for the sidebar.', 'pronamic' ),
-		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'name'          => __( 'Footer Widget Area', 'pronamic' ),
+		'id'            => 'footer-widget',
+		'description'   => __( 'The widget area for the footer.', 'pronamic' ),
+		'before_widget' => '<div id="%1$s" class="four columns widget %2$s">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>'

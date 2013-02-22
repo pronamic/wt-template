@@ -1,24 +1,8 @@
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php if ( is_sticky() ) : ?>
-
-			<hgroup>
-				<h2 class="entry-title">
-					<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'pronamic' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
-				</h2>
-	
-				<h3 class="entry-format">
-					<?php _e( 'Featured', 'pronamic' ); ?>
-				</h3>
-			</hgroup>
-
-		<?php else : ?>
-
-			<h1 class="entry-title">
-				<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'pronamic' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
-			</h1>
-
-		<?php endif; ?>
+		<h2 class="entry-title">
+			<a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'pronamic' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a>
+		</h2>
 
 		<?php if ( 'post' == get_post_type() ) : ?>
 
@@ -31,16 +15,26 @@
 
 	<?php if ( is_search() ) : ?>
 
-		<div class="entry-summary">
+		<div class="entry-summary clearfix">
+			<?php if ( has_post_thumbnail() ) : ?>
+
+				<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'featured' ) ); ?>
+
+			<?php endif; ?>
+
 			<?php the_excerpt(); ?>
 		</div>
 
 	<?php else : ?>
 
-		<div class="entry-content">
+		<div class="entry-content clearfix">
+			<?php if ( has_post_thumbnail() ) : ?>
+
+				<?php the_post_thumbnail( 'thumbnail', array( 'class' => 'featured' ) ); ?>
+
+			<?php endif; ?>
+
 			<?php the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'pronamic' ) ); ?>
-	
-			<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'pronamic' ) . '</span>', 'after' => '</div>' ) ); ?>
 		</div>
 
 	<?php endif; ?>

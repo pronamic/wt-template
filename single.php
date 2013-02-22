@@ -3,11 +3,6 @@
 <div id="content" role="main">
 	<?php while ( have_posts() ) : the_post(); ?>
 
-		<nav id="nav-single">
-			<span class="nav-previous"><?php previous_post_link( '%link', __( '<span class="meta-nav">&larr;</span> Previous', 'pronamic' ) ); ?></span>
-			<span class="nav-next"><?php next_post_link( '%link', __( 'Next <span class="meta-nav">&rarr;</span>', 'pronamic' ) ); ?></span>
-		</nav>
-	
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 			<header class="entry-header">
 				<h1 class="entry-title"><?php the_title(); ?></h1>
@@ -21,7 +16,7 @@
 				<?php endif; ?>
 			</header>
 		
-			<div class="entry-content">
+			<div class="entry-content clearfix">
 				<?php the_content(); ?>
 			</div>
 		
@@ -76,6 +71,11 @@
 				<?php endif; ?>
 			</footer>
 		</article>
+
+		<nav id="nav-single" class="clearfix">
+			<span class="nav-previous"><?php previous_post_link( '%link', __( '<span class="meta-nav">&larr;</span> Previous', 'pronamic' ) ); ?></span>
+			<span class="nav-next"><?php next_post_link( '%link', __( 'Next <span class="meta-nav">&rarr;</span>', 'pronamic' ) ); ?></span>
+		</nav>
 	
 		<?php comments_template( '', true ); ?>
 

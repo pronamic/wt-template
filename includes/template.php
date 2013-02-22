@@ -8,10 +8,10 @@ function pronamic_content_nav() {
 
 	if ( $wp_query->max_num_pages > 1 ) : ?>
 
-	<nav class="content-navigation">
-		<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'pronamic' ) ); ?></div>
-		<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'pronamic' ) ); ?></div>
-	</nav>
+		<nav class="content-navigation clearfix">
+			<div class="nav-previous"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'pronamic' ) ); ?></div>
+			<div class="nav-next"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'pronamic' ) ); ?></div>
+		</nav>
 
 	<?php endif;
 }
@@ -33,7 +33,7 @@ function pronamic_comment( $comment, $args, $depth ) {
 
 	<li class="post pingback">
 		<p>
-			<?php _e( 'Pingback:', 'pronamic' ); ?> <?php comment_author_link(); ?><?php edit_comment_link( __( 'Edit', 'pronamic' ), '<span class="edit-link">', '</span>' ); ?>
+			<?php _e( 'Pingback:', 'pronamic' ); ?> <?php comment_author_link(); ?>
 		</p>
 
 	<?php break; default: ?>
@@ -44,27 +44,23 @@ function pronamic_comment( $comment, $args, $depth ) {
 				<div class="comment-author vcard">
 					<?php
 
-					$avatar_size = 40;
+					echo get_avatar( $comment, 60 );
 
-					echo get_avatar( $comment, $avatar_size );
-
-					printf( __( '%1$s on %2$s <span class="says">said:</span>', 'pronamic' ),
+					printf( __( '%1$s on %2$s said:', 'pronamic' ),
 						sprintf( '<span class="fn">%s</span>', get_comment_author_link() ),
 						sprintf( '<a href="%1$s"><time pubdate datetime="%2$s">%3$s</time></a>',
-							esc_url( get_comment_link($comment->comment_ID ) ),
+							esc_url( get_comment_link( $comment->comment_ID ) ),
 							get_comment_time( 'c' ),
 							sprintf( __( '%1$s at %2$s', 'pronamic' ), get_comment_date(), get_comment_time() )
 						)
 					);
 
 					?>
-
-					<?php edit_comment_link( __( 'Edit', 'pronamic' ), '<span class="edit-link">', '</span>'); ?>
 				</div>
 
 				<?php if ( $comment->comment_approved == '0' ) : ?>
 	
-				<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'pronamic' ); ?></em><br />
+					<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'pronamic' ); ?></em><br />
 
 				<?php endif; ?>
 			</footer>
@@ -74,7 +70,15 @@ function pronamic_comment( $comment, $args, $depth ) {
 			</div>
 
 			<div class="reply">
-				<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply <span>&darr;</span>', 'pronamic' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+				<?php 
+
+				comment_reply_link( array_merge( $args, array( 
+					'reply_text' => __( 'Reply <span>&darr;</span>', 'pronamic' ), 
+					'depth'      => $depth, 
+					'max_depth'  => $args['max_depth'] 
+				) ) ); 
+
+				?>
 			</div>
 		</article>
 	<?php

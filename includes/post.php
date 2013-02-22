@@ -19,20 +19,20 @@ function pronamic_init() {
 			'new_item'           => __( 'New Client', 'pronamic' ) , 
 			'view_item'          => __( 'View Client', 'pronamic' ) , 
 			'search_items'       => __( 'Search Clients', 'pronamic' ) , 
-			'not_found'          =>  __( 'No clients found', 'pronamic' ) , 
+			'not_found'          => __( 'No clients found', 'pronamic' ) , 
 			'not_found_in_trash' => __( 'No clients found in Trash', 'pronamic' ) ,  
 			'parent_item_colon'  => __( 'Parent Client:', 'pronamic' ) , 
 			'menu_name'          => __( 'Clients',  'pronamic' )
 		) , 
-		'public' => true , 
-		'publicly_queryable' => true , 
-		'show_ui' => true ,  
-		'show_in_menu' => true ,  
-		'capability_type' => 'post' , 
-		'has_archive' => true , 
-		'rewrite' => array( 'slug' => 'klanten' ) ,
-		'menu_icon' => get_bloginfo( 'template_url' ) . '/admin/icons/client.png' ,
-		'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'custom-fields' ) 
+		'public'                 => true , 
+		'publicly_queryable'     => true , 
+		'show_ui'                => true ,  
+		'show_in_menu'           => true ,  
+		'capability_type'        => 'post' , 
+		'has_archive'            => true , 
+		'rewrite'                => array( 'slug' => 'klanten' ) ,
+		'menu_icon'              => get_bloginfo( 'template_url' ) . '/admin/icons/client.png' ,
+		'supports'               => array( 'title', 'editor', 'author', 'thumbnail', 'custom-fields' ) 
 	) );
 
 	// Register taxonomy
