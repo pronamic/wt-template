@@ -652,6 +652,11 @@ article.hentry:last-child {
 	margin: 0;
 }
 
+#respond p.comment-notes,
+#respond p.logged-in-as {
+	margin-bottom: 15px;
+}
+
 .children #respond {
 	margin: 0 40px 0 0;
 }
@@ -679,12 +684,6 @@ h3#reply-title {
 	font-weight: bold;
 }
 
-#respond label {
-	color: #888;
-
-	font-size: 12px;
-}
-
 #respond input {
 	margin: 0 0 10px;
 
@@ -703,10 +702,6 @@ h3#reply-title {
 
 #respond .form-allowed-tags code {
 	font-size: 11px;
-}
-
-#respond .form-submit {
-	margin: 10px 0;
 }
 
 #respond .form-submit input {

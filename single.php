@@ -23,9 +23,9 @@
 			<footer class="entry-meta">
 				<?php
 		
-				$categories_list = get_the_category_list( __( ', ', 'pronamic' ) );
-		
-				$tag_list = get_the_tag_list( '', __( ', ', 'pronamic' ) );
+				$categories_list = get_the_category_list( ', ' );
+				$tag_list = get_the_tag_list( '', ', ' );
+
 				if ( '' != $tag_list ) {
 					$utility_text = __( 'This entry was posted in %1$s and tagged %2$s by <a href="%6$s">%5$s</a>.', 'pronamic' );
 				} elseif( '' != $categories_list ) {

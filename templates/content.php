@@ -46,7 +46,7 @@
 
 			<?php
 	
-			$categories_list = get_the_category_list( __( ',  ', 'pronamic' ) );
+			$categories_list = get_the_category_list( ', ' );
 		
 			if ( $categories_list ) : ?>
 	
@@ -64,7 +64,7 @@
 	
 			<?php
 	
-			$tags_list = get_the_tag_list( '', __( ',  ', 'pronamic' ) );
+			$tags_list = get_the_tag_list( '', ', ' );
 	
 			if ( $tags_list ) : ?>
 			

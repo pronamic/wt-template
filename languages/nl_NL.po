@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pronamic\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-22 14:32+0100\n"
-"PO-Revision-Date: 2013-02-22 14:32+0100\n"
+"POT-Creation-Date: 2013-02-27 11:13+0100\n"
+"PO-Revision-Date: 2013-02-27 11:14+0100\n"
 "Last-Translator: K.Tolsma <kareljan@pronamic.nl>\n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "MIME-Version: 1.0\n"
@@ -39,10 +39,10 @@ msgstr "Dit bericht is beveiligd met een wachtwoord. Geef het wachtwoord om de r
 
 #: comments.php:15
 #, php-format
-msgid "One thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] "1 reactie op &ldquo;%2$s&rdquo;"
-msgstr[1] "%1$s reacties op &ldquo;%2$s&rdquo;"
+msgid "One thought"
+msgid_plural "%1$s thoughts"
+msgstr[0] "1 reactie"
+msgstr[1] "%1$s reacties"
 
 #: comments.php:21
 #: comments.php:34
@@ -114,11 +114,6 @@ msgstr "Pagina niet gevonden"
 #: 404.php:13
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr "Het lijkt erop dat we niet kunnen vinden waar je naar zoekt. Gebruik het zoekformulier."
-
-#: single.php:26
-#: single.php:28
-msgid ", "
-msgstr ","
 
 #: single.php:30
 #, php-format
@@ -193,11 +188,6 @@ msgstr "Permalink naar %s"
 #: templates/content.php:37
 msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Lees verder <span class=\"meta-nav\">&rarr;</span>"
-
-#: templates/content.php:49
-#: templates/content.php:67
-msgid ",  "
-msgstr ",  "
 
 #: templates/content.php:56
 #, php-format
@@ -330,6 +320,18 @@ msgstr "<span class=\"sep\">Geplaatst op </span><a href=\"%1$s\" title=\"%2$s\" 
 #, php-format
 msgid "View all posts by %s"
 msgstr "Bekijk alle berichten van %s"
+
+#~ msgid "One thought on &ldquo;%2$s&rdquo;"
+
+#~ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+#~ msgstr[0] "1 reactie op &ldquo;%2$s&rdquo;"
+#~ msgstr[1] "%1$s reacties op &ldquo;%2$s&rdquo;"
+
+#~ msgid ", "
+#~ msgstr ","
+
+#~ msgid ",  "
+#~ msgstr ",  "
 
 #~ msgid "Featured"
 #~ msgstr "Uitgelicht"
