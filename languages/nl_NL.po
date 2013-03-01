@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pronamic\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-02-27 11:13+0100\n"
-"PO-Revision-Date: 2013-02-27 11:14+0100\n"
+"POT-Creation-Date: 2013-03-01 08:53+0100\n"
+"PO-Revision-Date: 2013-03-01 08:54+0100\n"
 "Last-Translator: K.Tolsma <kareljan@pronamic.nl>\n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "MIME-Version: 1.0\n"
@@ -227,45 +227,48 @@ msgstr "Footer widget gebied"
 msgid "The widget area for the footer."
 msgstr "Het widget gebied voor de footer."
 
+#: includes/options.php:18
 #: includes/options.php:19
-#: includes/options.php:20
-#: includes/options.php:38
-msgid "Pronamic"
-msgstr "Pronamic"
+msgid "Pronamic Settings"
+msgstr "Pronamic instellingen"
 
-#: includes/options.php:45
+#: includes/options.php:37
+msgid "Pronamic Theme Options"
+msgstr "Pronamic thema instellingen"
+
+#: includes/options.php:53
 msgid "Input fields"
 msgstr "Invulvelden"
 
-#: includes/options.php:51
-msgid "Company Form ID"
-msgstr "Company form id"
+#: includes/options.php:59
+msgid "Slogan"
+msgstr "Slogan"
 
-#: includes/options.php:60
+#: includes/options.php:72
 msgid "Dropdown"
 msgstr "Dropdown"
 
-#: includes/options.php:66
+#: includes/options.php:78
 msgid "Login Page"
 msgstr "Login pagina"
 
-#: includes/options.php:74
+#: includes/options.php:86
 msgid "&mdash; Select a page &mdash;"
 msgstr "&mdash; Selecteer een pagina &mdash;"
 
-#: includes/options.php:83
+#: includes/options.php:95
 msgid "Radio buttons"
 msgstr "Radio buttons"
 
-#: includes/options.php:89
+#: includes/options.php:101
 msgid "Show theme developer"
 msgstr "Toon thema ontwikkelaar"
 
-#: includes/options.php:92
+#: includes/options.php:104
 msgid "Yes"
 msgstr "Ja"
 
-#: includes/options.php:93
+#: includes/options.php:105
 msgid "No"
 msgstr "Nee"
 
@@ -320,6 +323,9 @@ msgstr "<span class=\"sep\">Geplaatst op </span><a href=\"%1$s\" title=\"%2$s\" 
 #, php-format
 msgid "View all posts by %s"
 msgstr "Bekijk alle berichten van %s"
+
+#~ msgid "Company Form ID"
+#~ msgstr "Company form id"
 
 #~ msgid "One thought on &ldquo;%2$s&rdquo;"
 
@@ -551,9 +557,6 @@ msgstr "Bekijk alle berichten van %s"
 
 #~ msgid "Default Layout"
 #~ msgstr "Standaard layout"
-
-#~ msgid "Theme Options"
-#~ msgstr "Thema instellingen"
 
 #~ msgid ""
 #~ "Some themes provide customization options that are grouped together on a "
