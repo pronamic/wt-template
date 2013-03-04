@@ -1,16 +1,6 @@
 <?php
 
 /**
- * Admin initialize
- */
-function pronamic_admin_init() {
-	register_setting( 'general_options', 'General Options' );
-	register_setting( 'footer_options', 'Footer Options' );
-}
-
-add_action( 'admin_init', 'pronamic_admin_init' );
-
-/**
  * Admin menu
  */
 function pronamic_admin_menu() {
@@ -22,8 +12,17 @@ function pronamic_admin_menu() {
 		'pronamic_settings_page_render'
 	);
 }
-
 add_action( 'admin_menu', 'pronamic_admin_menu' );
+
+/**
+ * Admin initialize
+ */
+function pronamic_admin_init() {
+	register_setting( 'pronamic_general_options', 'pronamic_slogan' );
+	register_setting( 'pronamic_footer_options', 'pronamic_login_page_id' );
+	register_setting( 'pronamic_footer_options', 'pronamic_theme_developer' );
+}
+add_action( 'admin_init', 'pronamic_admin_init' );
 
 /**
  * Render
@@ -47,8 +46,8 @@ function pronamic_settings_page_render() {
 		<form method="post" action="options.php">
 			<?php if ( $active_tab == 'general_options' ) : ?>
 			
-				<?php settings_fields( 'general_options' ); ?>
-	
+				<?php settings_fields( 'pronamic_general_options' ); ?>
+			
 				<h3>
 					<?php _e( 'Input fields', 'pronamic' ); ?>
 				</h3>
@@ -65,9 +64,9 @@ function pronamic_settings_page_render() {
 				</table>
 			
 			<?php else : ?>
-			
-				<?php settings_fields( 'footer_options' ); ?>
-
+				
+				<?php settings_fields( 'pronamic_footer_options' ); ?>
+				
 				<h3>
 					<?php _e( 'Dropdown', 'pronamic' ); ?>
 				</h3>
@@ -101,7 +100,7 @@ function pronamic_settings_page_render() {
 							<label for="pronamic_theme_developer"><?php _e( 'Show theme developer', 'pronamic' ); ?></label>
 						</th>
 						<td>
-							<input name="pronamic_theme_developer" type="radio" value="1" <?php checked( get_option( 'pronamic_theme_developer' ), 1 ); ?> /> <?php _e( 'Yes', 'pronamic' ); ?>
+							<input name="pronamic_theme_developer" type="radio" value="1" <?php checked( get_option( 'pronamic_theme_developer' ), 1 ); ?> /> <?php _e( 'Yes', 'pronamic' ); ?> 
 							<input name="pronamic_theme_developer" type="radio" value="0" <?php checked( get_option( 'pronamic_theme_developer' ), 0 ); ?>  /> <?php _e( 'No', 'pronamic' ); ?>
 						</td>
 					</tr>

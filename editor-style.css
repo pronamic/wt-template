@@ -11,4 +11,23 @@ table {
 /* Global */
 p.lead {
 	font-size: 20px;
+
+	line-height: 1.4;
+}
+
+/* Buttons */
+a.btn {
+	background: #0088cc;
+
+	color: #fff;
+
+	display: inline-block;
+
+	padding: 5px 20px;
+
+	text-decoration: none;
+}
+
+a.btn.alt {
+	background: #88cc00;
 }
