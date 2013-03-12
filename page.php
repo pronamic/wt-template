@@ -10,6 +10,8 @@
 		
 			<div class="entry-content">
 				<?php the_content(); ?>
+				
+				<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'pronamic' ), 'after' => '</div>' ) ); ?>
 			</div>
 		</article>
 

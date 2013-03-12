@@ -18,6 +18,8 @@
 		
 			<div class="entry-content clearfix">
 				<?php the_content(); ?>
+				
+				<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'pronamic' ), 'after' => '</div>' ) ); ?>
 			</div>
 		
 			<footer class="entry-meta">

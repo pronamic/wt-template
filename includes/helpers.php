@@ -110,27 +110,6 @@ add_filter( 'nav_menu_css_class', 'pronamic_nav_menu_css_class', 10, 2 );
 
 
 /**
- * Get video thumbnail image
- */
-function pronamic_get_video_image( $videoURL ) {
-	$components = parse_url( $videoUrl, PHP_URL_QUERY );
-		
-	parse_str( $components, $output );
-
-	$videoID = trim($output['v']);
-	
-	if ( $videoID ) {
-		$content = 'http://gdata.youtube.com/feeds/api/videos/' . $videoID . '?v=2&alt=jsonc';
-		$json = json_decode( file_get_contents( $content ) );
-			
-		return $json->data->thumbnail->sqDefault;
-	}
-}
-
-///////////////////////////////////////////////
-
-
-/**
  * Get blog URL
  */
 function pronamic_get_blog_url(){
