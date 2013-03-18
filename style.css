@@ -41,8 +41,9 @@ table {
 }
 
 a:hover,
-a:active {
-    outline: 0;
+a:active,
+input {
+	outline: none;
 }
 
 nav ul:after,
@@ -77,18 +78,6 @@ body {
 	min-width: 990px;
 }
 
-p {
-	margin: 0 0 15px 0;
-}
-
-p.lead {
-	font-size: 20px;
-
-	font-family: georgia, serif;
-	font-style: italic;
-}
-
-
 /**
  * Anchors
  */
@@ -109,7 +98,8 @@ a:hover {
 .nav-previous a,
 .nav-next a,
 body .gform_wrapper .gform_footer input.button, 
-body .gform_wrapper .gform_footer input[type="submit"] {
+body .gform_wrapper .gform_footer input[type="submit"],
+input[type="submit"] {
 	background: #ddd;
 
 	background: -webkit-linear-gradient(top, #fff, #ddd);
@@ -142,7 +132,8 @@ body .gform_wrapper .gform_footer input[type="submit"] {
 .nav-previous a:hover,
 .nav-next a:hover,
 body .gform_wrapper .gform_footer input.button:hover, 
-body .gform_wrapper .gform_footer input[type="submit"]:hover {
+body .gform_wrapper .gform_footer input[type="submit"]:hover,
+input[type="submit"]:hover {
 	background: #ddd;
 }
 
@@ -165,9 +156,17 @@ body .gform_wrapper .gform_footer input[type="submit"]:hover {
 	background: #0086ce;
 }
 
-/**
- * Headings
- */
+.btn.large {
+	font-size: 18px;
+
+	padding: 10px 24px;
+}
+
+
+/* -----------------------------------------
+   Typography
+----------------------------------------- */
+
 h1, h2, h3, h4, h5, h6 { 
 	color: #000; 
 	
@@ -203,6 +202,29 @@ h5 a:hover,
 h6 a:hover {
 	color: #0088cc;
 }
+
+h1.page-title {
+	color: #999;
+
+	font-size: 26px;
+	font-weight: normal;
+}
+
+p {
+	margin: 0 0 15px 0;
+}
+
+p.lead {
+	font-size: 20px;
+
+	font-family: georgia, serif;
+	font-style: italic;
+}
+
+
+/* -----------------------------------------
+   Site structure
+----------------------------------------- */
 
 /**
  * Header
@@ -788,8 +810,8 @@ body .gform_wrapper .gform_footer {
    background-image: -o-linear-gradient(top, #2F2727, #1a82f7);
 }
 
-.transition {
-	-webkit-transition: background 0.2s linear;
-	-moz-transition: background 0.2s linear;
-	transition: background 0.2s linear;
+.animate {
+	-webkit-transition: all 0.2s linear;
+	-moz-transition: all 0.2s linear;
+	transition: all 0.2s linear;
 }

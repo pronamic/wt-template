@@ -19,21 +19,7 @@
 
 	<?php else : ?>
 
-		<article id="post-0" class="post no-results not-found">
-			<header class="entry-header">
-				<h1 class="entry-title">
-					<?php _e( 'Nothing Found', 'pronamic' ); ?>
-				</h1>
-			</header>
-	
-			<div class="entry-content">
-				<p>
-					<?php _e( 'Sorry, but nothing matched your search criteria. Please try again with some different keywords.', 'pronamic' ); ?>
-				</p>
-	
-				<?php get_search_form(); ?>
-			</div>
-		</article>
+		<?php get_template_part( 'templates/no-results' ); ?>
 
 	<?php endif; ?>
 </div>

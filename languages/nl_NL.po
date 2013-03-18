@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pronamic\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-01 08:53+0100\n"
-"PO-Revision-Date: 2013-03-01 08:54+0100\n"
+"POT-Creation-Date: 2013-03-18 14:52+0100\n"
+"PO-Revision-Date: 2013-03-18 14:52+0100\n"
 "Last-Translator: K.Tolsma <kareljan@pronamic.nl>\n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "MIME-Version: 1.0\n"
@@ -18,43 +18,34 @@ msgstr ""
 "X-Poedit-Basepath: ../\n"
 "X-Poedit-SearchPath-0: .\n"
 
+#: page.php:14
+#: single.php:22
+msgid "Pages:"
+msgstr "Pagina&#39;s:"
+
 #: search.php:8
 #, php-format
 msgid "Search Results for: %s"
 msgstr "Zoekresultaten voor: %s"
 
-#: search.php:25
-#: archive.php:72
-#: index.php:19
-msgid "Nothing Found"
-msgstr "Niets gevonden"
-
-#: search.php:31
-msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
-msgstr "Helaas, er zijn geen resultaten die overeenkomen met je criteria. Opnieuw proberen, met andere zoekwoorden?"
-
-#: comments.php:5
-msgid "This post is password protected. Enter the password to view any comments."
-msgstr "Dit bericht is beveiligd met een wachtwoord. Geef het wachtwoord om de reacties te bekijken."
-
-#: comments.php:15
+#: comments.php:13
 #, php-format
 msgid "One thought"
 msgid_plural "%1$s thoughts"
 msgstr[0] "1 reactie"
 msgstr[1] "%1$s reacties"
 
-#: comments.php:21
-#: comments.php:34
+#: comments.php:19
+#: comments.php:32
 msgid "&larr; Older Comments"
 msgstr "&larr; Oudere reacties"
 
-#: comments.php:22
-#: comments.php:35
+#: comments.php:20
+#: comments.php:33
 msgid "Newer Comments &rarr;"
 msgstr "Nieuwe reacties &rarr;"
 
-#: comments.php:43
+#: comments.php:41
 msgid "Comments are closed."
 msgstr "Reacties zijn gesloten."
 
@@ -102,11 +93,6 @@ msgstr "Y"
 msgid "Archive"
 msgstr "Archief"
 
-#: archive.php:78
-#: index.php:25
-msgid "Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post."
-msgstr "Excuses, er zijn geen resultaten gevonden voor het opgevraagde archief. Wellicht kan je de zoekfunctie gebruiken om naar gerelateerde berichten te zoeken."
-
 #: 404.php:7
 msgid "Page not found"
 msgstr "Pagina niet gevonden"
@@ -115,36 +101,36 @@ msgstr "Pagina niet gevonden"
 msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
 msgstr "Het lijkt erop dat we niet kunnen vinden waar je naar zoekt. Gebruik het zoekformulier."
 
-#: single.php:30
+#: single.php:32
 #, php-format
 msgid "This entry was posted in %1$s and tagged %2$s by <a href=\"%6$s\">%5$s</a>."
 msgstr "Dit bericht was geplaatst in %1$s en getagged %2$s door <a href=\"%6$s\">%5$s</a>."
 
-#: single.php:32
+#: single.php:34
 #, php-format
 msgid "This entry was posted in %1$s by <a href=\"%6$s\">%5$s</a>."
-msgstr "Dit bericht is geplaatst in %1$s by <a href=\"%6$s\">%5$s</a>."
+msgstr "Dit bericht is geplaatst in %1$s door <a href=\"%6$s\">%5$s</a>."
 
-#: single.php:34
+#: single.php:36
 #, php-format
 msgid "This entry was posted by <a href=\"%6$s\">%5$s</a>."
 msgstr "Dit bericht is geplaatst door <a href=\"%6$s\">%5$s</a>."
 
-#: single.php:58
+#: single.php:60
 #, php-format
 msgid "About %s"
 msgstr "Over %s"
 
-#: single.php:65
+#: single.php:67
 #, php-format
 msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Bekijk alle berichten van %s <span class=\"meta-nav\">&rarr;</span>"
 
-#: single.php:76
+#: single.php:78
 msgid "<span class=\"meta-nav\">&larr;</span> Previous"
 msgstr "<span class=\"meta-nav\">&larr;</span> Vorige"
 
-#: single.php:77
+#: single.php:79
 msgid "Next <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Volgende <span class=\"meta-nav\">&rarr;</span>"
 
@@ -175,10 +161,13 @@ msgid "Utility Menu"
 msgstr "Utility menu"
 
 #: searchform.php:3
-#: searchform.php:6
 #: searchform.php:7
 msgid "Search"
 msgstr "Zoeken"
+
+#: searchform.php:6
+msgid "Search&hellip;"
+msgstr "Zoeken&hellip;"
 
 #: templates/content.php:4
 #, php-format
@@ -211,6 +200,18 @@ msgstr "1 reactie"
 msgid "% Replies"
 msgstr "% reacties"
 
+#: templates/no-results.php:4
+msgid "Nothing Found"
+msgstr "Niets gevonden"
+
+#: templates/no-results.php:12
+msgid "Sorry, but nothing matched your search criteria. Please try again with some different keywords."
+msgstr "Helaas, er zijn geen resultaten die overeenkomen met je criteria. Opnieuw proberen, met andere zoekwoorden?"
+
+#: templates/no-results.php:20
+msgid "Apologies, but no results were found for the requested archive. Perhaps searching will help find a related post."
+msgstr "Excuses, er zijn geen resultaten gevonden voor het opgevraagde archief. Wellicht kan je de zoekfunctie gebruiken om naar gerelateerde berichten te zoeken."
+
 #: includes/widgets.php:26
 msgid "Main Widget Area"
 msgstr "Hoofd widget gebied"
@@ -227,48 +228,48 @@ msgstr "Footer widget gebied"
 msgid "The widget area for the footer."
 msgstr "Het widget gebied voor de footer."
 
-#: includes/options.php:18
-#: includes/options.php:19
+#: includes/options.php:8
+#: includes/options.php:9
 msgid "Pronamic Settings"
 msgstr "Pronamic instellingen"
 
-#: includes/options.php:37
+#: includes/options.php:36
 msgid "Pronamic Theme Options"
 msgstr "Pronamic thema instellingen"
 
-#: includes/options.php:53
+#: includes/options.php:52
 msgid "Input fields"
 msgstr "Invulvelden"
 
-#: includes/options.php:59
+#: includes/options.php:58
 msgid "Slogan"
 msgstr "Slogan"
 
-#: includes/options.php:72
+#: includes/options.php:71
 msgid "Dropdown"
 msgstr "Dropdown"
 
-#: includes/options.php:78
+#: includes/options.php:77
 msgid "Login Page"
 msgstr "Login pagina"
 
-#: includes/options.php:86
+#: includes/options.php:85
 msgid "&mdash; Select a page &mdash;"
 msgstr "&mdash; Selecteer een pagina &mdash;"
 
-#: includes/options.php:95
+#: includes/options.php:94
 msgid "Radio buttons"
 msgstr "Radio buttons"
 
-#: includes/options.php:101
+#: includes/options.php:100
 msgid "Show theme developer"
 msgstr "Toon thema ontwikkelaar"
 
-#: includes/options.php:104
+#: includes/options.php:103
 msgid "Yes"
 msgstr "Ja"
 
-#: includes/options.php:105
+#: includes/options.php:104
 msgid "No"
 msgstr "Nee"
 
@@ -324,6 +325,12 @@ msgstr "<span class=\"sep\">Geplaatst op </span><a href=\"%1$s\" title=\"%2$s\" 
 msgid "View all posts by %s"
 msgstr "Bekijk alle berichten van %s"
 
+#~ msgid ""
+#~ "This post is password protected. Enter the password to view any comments."
+#~ msgstr ""
+#~ "Dit bericht is beveiligd met een wachtwoord. Geef het wachtwoord om de "
+#~ "reacties te bekijken."
+
 #~ msgid "Company Form ID"
 #~ msgstr "Company form id"
 
@@ -341,9 +348,6 @@ msgstr "Bekijk alle berichten van %s"
 
 #~ msgid "Featured"
 #~ msgstr "Uitgelicht"
-
-#~ msgid "Pages:"
-#~ msgstr "Pagina&#39;s:"
 
 #~ msgid ""
 #~ "<span class=\"meta-prep meta-prep-entry-date\">Published </span> <span "

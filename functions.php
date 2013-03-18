@@ -71,19 +71,3 @@ function pronamic_load_scripts() {
 	*/
 }
 add_action( 'wp_enqueue_scripts', 'pronamic_load_scripts' );
-
-/**
- * Fix shortcode output
- */
-function stormmc_shortcode_empty_paragraph_fix( $content ) {   
-	$array = array (
-		'<p>[' => '[', 
-		']</p>' => ']', 
-		']<br />' => ']'
-	);
-
-	$content = strtr( $content, $array );
-
-	return $content;
-}
-add_filter( 'the_content', 'stormmc_shortcode_empty_paragraph_fix' );
