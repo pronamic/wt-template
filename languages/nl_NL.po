@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pronamic\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-18 14:52+0100\n"
-"PO-Revision-Date: 2013-03-18 14:52+0100\n"
+"POT-Creation-Date: 2013-03-22 15:20+0100\n"
+"PO-Revision-Date: 2013-03-22 15:20+0100\n"
 "Last-Translator: K.Tolsma <kareljan@pronamic.nl>\n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "MIME-Version: 1.0\n"
@@ -48,50 +48,6 @@ msgstr "Nieuwe reacties &rarr;"
 #: comments.php:41
 msgid "Comments are closed."
 msgstr "Reacties zijn gesloten."
-
-#: archive.php:11
-#, php-format
-msgid "Category Archives: %s"
-msgstr "Categorie archief: %s"
-
-#: archive.php:14
-#, php-format
-msgid "Tag Archives: %s"
-msgstr "Tagarchief: %s"
-
-#: archive.php:19
-#, php-format
-msgid "Author Archives: %s"
-msgstr "Auteursarchief: %s"
-
-#: archive.php:24
-#, php-format
-msgid "Daily Archives: %s"
-msgstr "Dagelijks archief: %s"
-
-#: archive.php:27
-#, php-format
-msgid "Monthly Archives: %s"
-msgstr "Maandelijks archief: %s"
-
-#: archive.php:27
-msgctxt "monthly archives date format"
-msgid "F Y"
-msgstr "F Y"
-
-#: archive.php:30
-#, php-format
-msgid "Yearly Archives: %s"
-msgstr "Jaarlijks archief: %s"
-
-#: archive.php:30
-msgctxt "yearly archives date format"
-msgid "Y"
-msgstr "Y"
-
-#: archive.php:33
-msgid "Archive"
-msgstr "Archief"
 
 #: 404.php:7
 msgid "Page not found"
@@ -230,8 +186,8 @@ msgstr "Het widget gebied voor de footer."
 
 #: includes/options.php:8
 #: includes/options.php:9
-msgid "Pronamic Settings"
-msgstr "Pronamic instellingen"
+msgid "Theme Options"
+msgstr "Theme opties"
 
 #: includes/options.php:36
 msgid "Pronamic Theme Options"
@@ -317,13 +273,60 @@ msgstr "Reageer <span>&darr;</span>"
 
 #: includes/template.php:97
 #, php-format
+msgid "Category Archives: %s"
+msgstr "Categorie archief: %s"
+
+#: includes/template.php:100
+#, php-format
+msgid "Tag Archives: %s"
+msgstr "Tagarchief: %s"
+
+#: includes/template.php:105
+#, php-format
+msgid "Author Archives: %s"
+msgstr "Auteursarchief: %s"
+
+#: includes/template.php:110
+#, php-format
+msgid "Daily Archives: %s"
+msgstr "Dagelijks archief: %s"
+
+#: includes/template.php:113
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr "Maandelijks archief: %s"
+
+#: includes/template.php:113
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr "F Y"
+
+#: includes/template.php:116
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr "Jaarlijks archief: %s"
+
+#: includes/template.php:116
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr "Y"
+
+#: includes/template.php:119
+msgid "Archive"
+msgstr "Archief"
+
+#: includes/template.php:151
+#, php-format
 msgid "<span class=\"sep\">Posted on </span><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"by-author\"> <span class=\"sep\"> by </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
 msgstr "<span class=\"sep\">Geplaatst op </span><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"by-author\"> <span class=\"sep\"> door </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
 
-#: includes/template.php:103
+#: includes/template.php:157
 #, php-format
 msgid "View all posts by %s"
 msgstr "Bekijk alle berichten van %s"
+
+#~ msgid "Pronamic Settings"
+#~ msgstr "Pronamic instellingen"
 
 #~ msgid ""
 #~ "This post is password protected. Enter the password to view any comments."
@@ -650,9 +653,6 @@ msgstr "Bekijk alle berichten van %s"
 
 #~ msgid "Default color: %s"
 #~ msgstr "Standaard kleur: %s"
-
-#~ msgid "%s Theme Options"
-#~ msgstr "%s thema instellingen"
 
 #~ msgid ""
 #~ "Use this widget to list your recent Aside, Status, Quote, and Link posts"

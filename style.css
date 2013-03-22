@@ -538,10 +538,6 @@ aside .panel p:last-child {
 	font-size: 12px;
 }
 
-.bypostauthor {
-	color: #999;
-}
-
 .sticky {
 	background: #fff9ca;
 
@@ -606,9 +602,16 @@ article.hentry:last-child {
 	border-bottom: 1px solid #eee;
 
 	margin-bottom: 20px;
-	padding: 0 0 0 70px;
+	padding: 0 0 0 80px;
 
 	position: relative;
+}
+
+.bypostauthor > article.comment {
+	background: #e9f2fa;
+
+	margin-bottom: 20px;
+	padding: 20px;
 }
 
 .commentlist li:last-child {

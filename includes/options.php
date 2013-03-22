@@ -5,8 +5,8 @@
  */
 function pronamic_admin_menu() {
 	add_theme_page( 
-		__( 'Pronamic Settings', 'pronamic' ),
-		__( 'Pronamic Settings', 'pronamic' ),
+		__( 'Theme Options', 'pronamic' ),
+		__( 'Theme Options', 'pronamic' ),
 		'edit_theme_options',
 		'pronamic_settings',
 		'pronamic_settings_page_render'
