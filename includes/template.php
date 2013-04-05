@@ -19,6 +19,15 @@ function pronamic_content_nav() {
 
 ///////////////////////////////////////////////
 
+/**
+ * Enqueue comment reply script
+ */
+function pronamic_enqueue_comments_reply() {
+	if ( get_option( 'thread_comments' ) )  {
+		wp_enqueue_script( 'comment-reply' );
+	}
+}
+add_action( 'comment_form_before', 'pronamic_enqueue_comments_reply' );
 
 /**
  * Template for comments and pingbacks.
@@ -60,7 +69,9 @@ function pronamic_comment( $comment, $args, $depth ) {
 
 				<?php if ( $comment->comment_approved == '0' ) : ?>
 	
-					<em class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'pronamic' ); ?></em><br />
+					<p class="comment-awaiting-moderation">
+						<?php _e( 'Your comment is awaiting moderation.', 'pronamic' ); ?>
+					</p>
 
 				<?php endif; ?>
 			</footer>
@@ -95,26 +106,29 @@ function pronamic_comment( $comment, $args, $depth ) {
 function pronamic_archive_title() {
 	if ( is_category() ) {
 		printf( __( 'Category Archives: %s', 'pronamic' ), '<span>' . single_cat_title( '', false ) . '</span>' );
-	
+
 	} elseif ( is_tag() ) {
 		printf( __( 'Tag Archives: %s', 'pronamic' ), '<span>' . single_tag_title( '', false ) . '</span>' );
-	
+
 	} elseif ( is_author() ) {
 		the_post();
-	
+
 		printf( __( 'Author Archives: %s', 'pronamic' ), '<span class="vcard"><a class="url fn n" href="' . get_author_posts_url( get_the_author_meta( "ID" ) ) . '" title="' . esc_attr( get_the_author() ) . '" rel="me">' . get_the_author() . '</a></span>' );
-	
+
 		rewind_posts();
-	
+
 	} elseif ( is_day() ) {
 		printf( __( 'Daily Archives: %s', 'pronamic' ), '<span>' . get_the_date() . '</span>' );
-	
+
 	} elseif ( is_month() ) {
 		printf( __( 'Monthly Archives: %s', 'pronamic' ), '<span>' . get_the_date( _x( 'F Y', 'monthly archives date format', 'pronamic' ) ) . '</span>' );
-	
+
 	} elseif ( is_year() ) {
 		printf( __( 'Yearly Archives: %s', 'pronamic' ), '<span>' . get_the_date( _x( 'Y', 'yearly archives date format', 'pronamic' ) ) . '</span>' );
-	
+
+	} elseif ( is_post_type_archive() ) {
+		post_type_archive_title();
+
 	} else {
 		_e( 'Archive', 'pronamic' );
 	}
@@ -240,42 +254,3 @@ function pronamic_nav_menu_css_class( $classes, $item ) {
 	return $classes;
 }
 add_filter( 'nav_menu_css_class', 'pronamic_nav_menu_css_class', 10, 2 );
-
-
-///////////////////////////////////////////////
-
-
-/**
- * Add extra styles to the TinyMCE editor
- */
-function pronamic_add_mce_buttons( $buttons ) {
-	array_unshift( $buttons, 'styleselect' );
-
-	return $buttons;
-}
-add_filter( 'mce_buttons_2', 'pronamic_add_mce_buttons' );
-
-function pronamic_set_mce_formats( $settings ) {
-    $style_formats = array(
-    	array(
-    		'title'    => 'Button',
-    		'selector' => 'a',
-    		'classes'  => 'btn'
-    	),
-    	array(
-    		'title'    => 'Button important',
-    		'selector' => 'a',
-    		'classes'  => 'btn alt'
-    	),
-    	array(
-    		'title'    => 'Intro',
-    		'selector' => 'p',
-    		'classes'  => 'lead'
-    	)
-    );
-
-    $settings['style_formats'] = json_encode( $style_formats );
-
-    return $settings;
-}
-add_filter( 'tiny_mce_before_init', 'pronamic_set_mce_formats' );

@@ -14,3 +14,38 @@ function pronamic_remove_dashboard_widgets() {
 	remove_meta_box( 'dashboard_secondary', 'dashboard', 'normal' );
 }
 add_action( 'admin_init', 'pronamic_remove_dashboard_widgets' );
+
+/**
+ * Add extra styles to the TinyMCE editor
+ */
+function pronamic_add_mce_buttons( $buttons ) {
+	array_unshift( $buttons, 'styleselect' );
+
+	return $buttons;
+}
+add_filter( 'mce_buttons_2', 'pronamic_add_mce_buttons' );
+
+function pronamic_set_mce_formats( $settings ) {
+    $style_formats = array(
+    	array(
+    		'title'    => 'Button',
+    		'selector' => 'a',
+    		'classes'  => 'btn'
+    	),
+    	array(
+    		'title'    => 'Button important',
+    		'selector' => 'a',
+    		'classes'  => 'btn alt'
+    	),
+    	array(
+    		'title'    => 'Intro',
+    		'selector' => 'p',
+    		'classes'  => 'lead'
+    	)
+    );
+
+    $settings['style_formats'] = json_encode( $style_formats );
+
+    return $settings;
+}
+add_filter( 'tiny_mce_before_init', 'pronamic_set_mce_formats' );

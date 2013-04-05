@@ -161,7 +161,7 @@ function pronamic_get_root_page_slug() {
 /**
  * Fix shortcode output
  */
-function stormmc_shortcode_empty_paragraph_fix( $content ) {   
+function pronamic_shortcode_empty_paragraph_fix( $content ) {   
 	$array = array (
 		'<p>[' => '[', 
 		']</p>' => ']', 
@@ -172,4 +172,23 @@ function stormmc_shortcode_empty_paragraph_fix( $content ) {
 
 	return $content;
 }
-add_filter( 'the_content', 'stormmc_shortcode_empty_paragraph_fix' );
+add_filter( 'the_content', 'pronamic_shortcode_empty_paragraph_fix' );
+
+
+///////////////////////////////////////////////
+
+
+/**
+ * Add attachment link
+ */
+function pronamic_add_class_attachment_link( $content, $id, $size, $permalink, $icon, $text ) {
+	if ( $permalink ) {
+		return $content;
+
+	} else {
+   		$content = str_replace( '<a', '<a class="fancybox" rel="gallery"', $content );
+
+   		return $content;
+   	}
+}
+add_filter( 'wp_get_attachment_link', 'pronamic_add_class_attachment_link', 10, 6 );
