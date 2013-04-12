@@ -33,14 +33,14 @@ function pronamic_settings_page_render() {
 		<?php screen_icon(); ?>
 
 		<h2>
-			<?php _e( 'Pronamic Theme Options', 'pronamic' ); ?>
+			<?php _e( 'Theme Options', 'pronamic' ); ?>
 		</h2>
 
         <?php $active_tab = isset( $_GET[ 'tab' ] ) ? $_GET[ 'tab' ] : 'general_options'; ?>  
           
         <h2 class="nav-tab-wrapper">  
-            <a href="?page=pronamic_settings&tab=general_options" class="nav-tab <?php echo $active_tab == 'general_options' ? 'nav-tab-active' : ''; ?>">General</a>  
-            <a href="?page=pronamic_settings&tab=footer_options" class="nav-tab <?php echo $active_tab == 'footer_options' ? 'nav-tab-active' : ''; ?>">Footer</a>  
+            <a href="?page=pronamic_settings&tab=general_options" class="nav-tab <?php echo $active_tab == 'general_options' ? 'nav-tab-active' : ''; ?>"><?php _e( 'General', 'pronamic' ); ?></a>  
+            <a href="?page=pronamic_settings&tab=footer_options" class="nav-tab <?php echo $active_tab == 'footer_options' ? 'nav-tab-active' : ''; ?>"><?php _e( 'Footer', 'pronamic' ); ?></a>  
         </h2> 
 
 		<form method="post" action="options.php">
