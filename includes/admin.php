@@ -49,3 +49,19 @@ function pronamic_set_mce_formats( $settings ) {
     return $settings;
 }
 add_filter( 'tiny_mce_before_init', 'pronamic_set_mce_formats' );
+
+function pronamic_custom_image_sizes_dropdown( $sizes ) {
+	global $_wp_additional_image_sizes;
+	
+	if ( empty( $_wp_additional_image_sizes ) )
+		return $sizes;
+	
+	foreach ( $_wp_additional_image_sizes as $id => $meta ) {
+		if ( ! isset( $sizes[ $id ] ) )
+			$sizes[ $id ] = ucfirst( str_replace( '-', ' ', $id ) );
+	}
+	
+	return $sizes;
+}
+
+add_filter( 'image_size_names_choose', 'pronamic_custom_image_sizes_dropdown' );
