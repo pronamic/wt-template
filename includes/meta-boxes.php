@@ -74,7 +74,11 @@ function pronamic_save_video( $post_id ) {
 	) );
 
 	foreach ( $data as $key => $value ) {
-		update_post_meta( $post_id, $key, $value );
+		if ( empty( $value ) ) {
+			delete_post_meta( $post_id, $key );
+		} else {
+			update_post_meta( $post_id, $key, $value );
+		}
 	}
 }
 
