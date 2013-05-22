@@ -55,9 +55,7 @@ function pronamic_video_box( $post ) {
 /**
  * Save video metabox
  */
-function pronamic_save_video( $post_id ) {
-	global $post;
-
+function pronamic_save_video( $post_id, $post ) {
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE) 
     	return;
 
@@ -82,4 +80,4 @@ function pronamic_save_video( $post_id ) {
 	}
 }
 
-add_action( 'save_post', 'pronamic_save_video' );
+add_action( 'save_post', 'pronamic_save_video', 10, 2 );
