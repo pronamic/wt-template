@@ -3,8 +3,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Pronamic\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2013-03-22 15:20+0100\n"
-"PO-Revision-Date: 2013-03-22 15:20+0100\n"
+"POT-Creation-Date: 2013-06-10 12:40+0100\n"
+"PO-Revision-Date: 2013-06-10 12:41+0100\n"
 "Last-Translator: K.Tolsma <kareljan@pronamic.nl>\n"
 "Language-Team: Pronamic <info@pronamic.nl>\n"
 "MIME-Version: 1.0\n"
@@ -186,12 +186,17 @@ msgstr "Het widget gebied voor de footer."
 
 #: includes/options.php:8
 #: includes/options.php:9
+#: includes/options.php:36
 msgid "Theme Options"
 msgstr "Theme opties"
 
-#: includes/options.php:36
-msgid "Pronamic Theme Options"
-msgstr "Pronamic thema instellingen"
+#: includes/options.php:42
+msgid "General"
+msgstr "Algemeen"
+
+#: includes/options.php:43
+msgid "Footer"
+msgstr "Footer"
 
 #: includes/options.php:52
 msgid "Input fields"
@@ -249,81 +254,84 @@ msgstr "<span class=\"meta-nav\">&larr;</span> Oudere berichten"
 msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
 msgstr "Nieuwere berichten <span class=\"meta-nav\">&rarr;</span>"
 
-#: includes/template.php:36
+#: includes/template.php:45
 msgid "Pingback:"
 msgstr "Pingback:"
 
-#: includes/template.php:49
+#: includes/template.php:58
 #, php-format
 msgid "%1$s on %2$s said:"
 msgstr "%1$s op %2$s zegt:"
 
-#: includes/template.php:54
+#: includes/template.php:63
 #, php-format
 msgid "%1$s at %2$s"
 msgstr "%1$s om %2$s"
 
-#: includes/template.php:63
+#: includes/template.php:73
 msgid "Your comment is awaiting moderation."
 msgstr "Je reactie is in afwachting van moderatie."
 
-#: includes/template.php:76
+#: includes/template.php:87
 msgid "Reply <span>&darr;</span>"
 msgstr "Reageer <span>&darr;</span>"
 
-#: includes/template.php:97
+#: includes/template.php:108
 #, php-format
 msgid "Category Archives: %s"
 msgstr "Categorie archief: %s"
 
-#: includes/template.php:100
+#: includes/template.php:111
 #, php-format
 msgid "Tag Archives: %s"
 msgstr "Tagarchief: %s"
 
-#: includes/template.php:105
+#: includes/template.php:116
 #, php-format
 msgid "Author Archives: %s"
 msgstr "Auteursarchief: %s"
 
-#: includes/template.php:110
+#: includes/template.php:121
 #, php-format
 msgid "Daily Archives: %s"
 msgstr "Dagelijks archief: %s"
 
-#: includes/template.php:113
+#: includes/template.php:124
 #, php-format
 msgid "Monthly Archives: %s"
 msgstr "Maandelijks archief: %s"
 
-#: includes/template.php:113
+#: includes/template.php:124
 msgctxt "monthly archives date format"
 msgid "F Y"
 msgstr "F Y"
 
-#: includes/template.php:116
+#: includes/template.php:127
 #, php-format
 msgid "Yearly Archives: %s"
 msgstr "Jaarlijks archief: %s"
 
-#: includes/template.php:116
+#: includes/template.php:127
 msgctxt "yearly archives date format"
 msgid "Y"
 msgstr "Y"
 
-#: includes/template.php:119
+#: includes/template.php:133
 msgid "Archive"
 msgstr "Archief"
 
-#: includes/template.php:151
+#: includes/template.php:165
 #, php-format
 msgid "<span class=\"sep\">Posted on </span><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"by-author\"> <span class=\"sep\"> by </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
 msgstr "<span class=\"sep\">Geplaatst op </span><a href=\"%1$s\" title=\"%2$s\" rel=\"bookmark\"><time class=\"entry-date\" datetime=\"%3$s\" pubdate>%4$s</time></a><span class=\"by-author\"> <span class=\"sep\"> door </span> <span class=\"author vcard\"><a class=\"url fn n\" href=\"%5$s\" title=\"%6$s\" rel=\"author\">%7$s</a></span></span>"
 
-#: includes/template.php:157
+#: includes/template.php:171
 #, php-format
 msgid "View all posts by %s"
 msgstr "Bekijk alle berichten van %s"
+
+#~ msgid "Pronamic Theme Options"
+#~ msgstr "Pronamic thema instellingen"
 
 #~ msgid "Pronamic Settings"
 #~ msgstr "Pronamic instellingen"
