@@ -69,5 +69,8 @@ function pronamic_load_scripts() {
 
 
 	*/
+	
+	wp_register_style( 'theme_stylesheet', get_stylesheet_uri() );
+	wp_enqueue_style( 'theme_stylesheet' );
 }
 add_action( 'wp_enqueue_scripts', 'pronamic_load_scripts' );
