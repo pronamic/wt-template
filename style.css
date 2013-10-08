@@ -81,7 +81,8 @@ body {
 /**
  * Anchors
  */
-a {
+a,
+a:focus {
 	color: #0088cc;
 
 	text-decoration: none;
@@ -559,9 +560,9 @@ article header .entry-meta {
 	margin: -10px 0 15px 0;
 }
 
-.blog article.hentry,
-.archive article.hentry,
-.search article.hentry {
+.blog .type-post,
+.search .type-post,
+.archive .type-post {
 	border-bottom: 1px solid #eee;
 
 	padding-bottom: 20px;

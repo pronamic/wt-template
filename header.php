@@ -5,15 +5,13 @@
 		<meta charset="<?php bloginfo( 'charset' ); ?>" />
      	<meta name="viewport" content="width=device-width" />
 
-		<meta name="author" content="Pronamic" />
-		
 		<title>
 			<?php wp_title( '' ); ?>
 		</title>
 		
 		<link rel="profile" href="http://gmpg.org/xfn/11" />
 		<link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
+		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 
 		<link href="<?php echo get_template_directory_uri(); ?>/icons/icon.png" rel="shortcut icon" type="image/x-icon" />
 		<link href="<?php echo get_template_directory_uri(); ?>/icons/apple-touch-icon.png" rel="apple-touch-icon" />
