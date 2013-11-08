@@ -7,7 +7,8 @@ require_once get_template_directory() . '/includes/post.php';
 require_once get_template_directory() . '/includes/template.php';
 require_once get_template_directory() . '/includes/widgets.php';
 require_once get_template_directory() . '/includes/admin.php';
-// require_once get_template_directory() . '/includes/options.php';
+require_once get_template_directory() . '/includes/settings-fields.php';
+require_once get_template_directory() . '/includes/options.php';
 // require_once get_template_directory() . '/includes/meta-boxes.php';
 // require_once get_template_directory() . '/includes/shortcodes.php';
 
